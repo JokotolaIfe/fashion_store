@@ -1,0 +1,41 @@
+.carousel-caption {
+    margin-top: -200px;
+}
+
+mdb-icon {
+    margin-top: 20px;
+}
+
+mdb-icon:hover {
+    animation: fadeIn ease;
+    -webkit-animation: fadeIn ease;
+    -moz-animation: fadeIn ease;
+    -o-animation: fadeIn ease;
+    -ms-animation: fadeIn ease; 
+    color: rgb(68, 101, 141) !important;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  @media only screen and (min-width : 700px) {
+    .my_bg {
+            display: inline-block !important; 
+            width: 100% !important; 
+            overflow: hidden !important; 
+            background-position: center;    
+            background-size: cover;
+            height: 600px !important;
+        }
+  } 
+
+  @media only screen and (max-width : 700px) {
+    .my_bg {
+            display: inline-block !important; 
+            height: auto !important; 
+            width: 100% !important; 
+            overflow: hidden !important; 
+            background-position: center;    
+            background-size: cover;
+            height: 300px !important;
+        }
+  } 

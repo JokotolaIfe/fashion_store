@@ -1,0 +1,310 @@
+.navbar .mega-dropdown {
+  position: static !important;
+}
+
+.navbar .dropdown-menu.mega-menu {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar .dropdown-menu.mega-menu a {
+  padding: 0 0 0 0;
+}
+
+.navbar .dropdown-menu.mega-menu a.news-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #4f4f4f !important;
+}
+ 
+.navbar .dropdown-menu.mega-menu a.news-title:hover {
+  color: #fff !important;
+  background-color: rgb(44, 43, 43)
+}
+
+.navbar .dropdown-menu.mega-menu a.news-title.smaller {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 180px !important;
+}
+
+.navbar .dropdown-menu.mega-menu .sub-menu a.menu-item {
+  color: #4f4f4f !important;
+}
+
+.navbar .dropdown-menu.mega-menu .sub-menu a.menu-item:hover {
+  background-color: rgb(44, 43, 43);
+  color: #fff !important;
+}
+
+.dark-text:hover {
+  text-decoration: none !important;
+  background-color: #161616 !important;
+  color: #fff !important;
+  animation: fadeIn ease .7s;
+  -webkit-animation: fadeIn ease .7s;
+  -moz-animation: fadeIn ease .7s;
+  -o-animation: fadeIn ease .7s;
+  -ms-animation: fadeIn ease .7s;  
+}
+
+.navbar .dropdown-menu.mega-menu .news-single {
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar .dropdown-menu.mega-menu .sub-title {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar .dropdown-menu.mega-menu .p-sm {
+  padding-bottom: 0;
+}
+
+.navbar .dropdown-menu.mega-menu .m-sm {
+  margin-bottom: -5px;
+  font-size: 0.85rem;
+  color: #6e6767 !important;
+}
+
+.navbar .dropdown-menu.mega-menu .m-sm:hover {
+  color: #fff !important;
+}
+
+.navbar .dropdown-menu.mega-menu .mt-sm {
+  margin-top: -3px;
+}
+
+.navbar .dropdown-menu.mega-menu .font-small {
+  font-size: 0.85rem;
+}
+
+li:hover>.dropdown-menu {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;  
+  
+  display: block;
+}
+
+  .nav-link {
+    font-size: 20px;
+    margin-right: 29px;
+    font-weight: 10;
+    color: #4f4f4f !important;
+    font-family:  Calibri;
+  }
+
+  a{
+    color: #4f4f4f;
+    font-family: "DIN Next W01", sans-serif;
+  }
+
+  .container {
+    height: 100% !important;
+    margin: unset !important;
+  }
+
+  li {
+    height: unset;
+    height: 100% !important;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    a.nav-link.dropdown-toggle {
+      height: auto !important;
+      // padding-top: 85px !important
+    }
+    .shops_container {
+      padding: 20px !important
+    }
+    .my_space{
+      display: none;
+    }
+    .my_space0{
+      display: none;
+    }
+    .my_margin2 {
+      margin-top: -15%;
+    }
+    .my_margin {
+      margin-top: -17% !important; 
+    }
+   }
+
+   @media only screen and (min-width: 768px) {
+    .my_margin {
+      margin-top: -7% !important; 
+    }
+    .my_margin2 {
+      margin-top: -5% !important; 
+    }
+    .my_space {
+      background-color: transparent !important; line-height: 50px !important
+    }
+    .shops_container {
+      padding: 20px !important
+    }
+   }
+
+   .navbar{
+     height: 300px !important
+   }
+
+   .nav {
+     height: 700px
+   }
+
+   .top-nav-collapse {
+    background-color: rgb(35, 35, 35);
+    height: 400px !important
+  }
+
+
+
+  
+.my_btn {
+  width: 100%;
+  margin: auto !important;
+  height: auto;
+  line-height: 26px;
+  font-size: 14px;
+  padding: 10px;
+  border: solid 1px black;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.my_btn:hover {
+margin: auto !important;
+cursor: pointer;
+background-color: black;
+color: white;
+width: 100%;
+height: auto;
+font-size: 14px;
+padding: 10px;
+text-align: center;
+border: solid 1px black;
+animation: fadeIn ease 1s;
+-webkit-animation: fadeIn ease 1s;
+-moz-animation: fadeIn ease 1s;
+-o-animation: fadeIn ease 1s;
+-ms-animation: fadeIn ease 1s; 
+}
+
+.category_card {
+  font-size: 25px;
+  color: white;
+  background-color: rgb(33, 33, 33, 0.7);
+  border-radius: 3px;
+  margin: auto;
+  line-height: 150px !important;
+  padding: 40px;
+  height: 150px !important;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer
+}
+
+.category_card:hover {
+  font-size: 25px;
+  color: white;
+  background-color: rgb(33, 33, 33, 0.9);
+  border-radius: 3px;
+  margin: auto;
+  line-height: 150px !important;
+  padding: 40px;
+  height: 150px !important;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s; 
+}
+
+.cat_cont {
+  height: auto;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  margin: auto;
+  height: 150px !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.ml-auto {
+  margin: auto !important;
+}
+
+.badge {
+  margin-top: -20px !important;
+  position: absolute !important;
+  padding: 2px !important;
+}
+
+.dropdown-item:hover {
+  background: #000 !important
+}
+
+
+li mdb-icon:hover {
+  animation: fadeIn ease;
+  -webkit-animation: fadeIn ease;
+  -moz-animation: fadeIn ease;
+  -o-animation: fadeIn ease;
+  -ms-animation: fadeIn ease; 
+  color: rgb(68, 101, 141) !important;
+}
+
+li a:hover {
+  animation: fadeIn ease;
+  -webkit-animation: fadeIn ease;
+  -moz-animation: fadeIn ease;
+  -o-animation: fadeIn ease;
+  -ms-animation: fadeIn ease; 
+  color: white !important;
+  background-color: black !important;
+}
+
+
+
+mdb-navbar-brand a:hover {
+  animation: fadeIn ease;
+  -webkit-animation: fadeIn ease;
+  -moz-animation: fadeIn ease;
+  -o-animation: fadeIn ease;
+  -ms-animation: fadeIn ease; 
+  color: rgb(68, 101, 141) !important;
+}
+
+p .me:hover {
+  animation: fadeIn ease;
+  -webkit-animation: fadeIn ease;
+  -moz-animation: fadeIn ease;
+  -o-animation: fadeIn ease;
+  -ms-animation: fadeIn ease; 
+  color: rgb(251, 251, 251) !important;
+  background-color: black !important;
+}

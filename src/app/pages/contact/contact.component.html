@@ -1,0 +1,111 @@
+<div class="container">
+<!--Section: Contact v.1-->
+<section class="pb-5">
+
+        <!--Section heading-->
+        <h2 class="h1 pt-4">Contact us</h2>
+        <!--Section description-->
+        <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure
+          provident
+          voluptate esse quasi,
+          veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+      
+        <div class="row">
+      
+          <!--Grid column-->
+          <div class="col-lg-5 my-4">
+      
+            <!--Form with header-->
+            <mdb-card>
+      
+              <mdb-card-body>
+                <!--Header-->
+                <div class="form-header black accent-1">
+                  <h3>
+                    <mdb-icon fas icon="envelope"></mdb-icon> Write to us:</h3>
+                </div>
+      
+                <p>We'll write rarely, but only the best content.</p>
+                <br>
+      
+                <!--Body-->
+                <div class="md-form">
+                  <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+                  <input mdbInput type="text" id="form3" class="form-control">
+                  <label for="form3">Your name</label>
+                </div>
+      
+                <div class="md-form">
+                  <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+                  <input mdbInput type="text" id="form2" class="form-control">
+                  <label for="form2">Your email</label>
+                </div>
+      
+                <div class="md-form">
+                  <mdb-icon fas icon="tag" class="prefix grey-text"></mdb-icon>
+                  <input mdbInput type="text" id="form32" class="form-control">
+                  <label for="form34">Subject</label>
+                </div>
+      
+                <div class="md-form">
+                  <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
+                  <textarea mdbInput type="text" id="form8" class="md-textarea"></textarea>
+                  <label for="form8">Icon Prefix</label>
+                </div>
+      
+                <div class="text-center">
+                  <button mdbBtn color="grey" class="waves-light" mdbWavesEffect>Submit</button>
+                </div>
+      
+              </mdb-card-body>
+      
+            </mdb-card>
+            <!--Form with header-->
+      
+          </div>
+          <!--Grid column-->
+      
+          <!--Grid column-->
+          <div class="col-lg-7">
+      
+            <!--Google map-->
+            <agm-map class="z-depth-1-half map-container" style="height: 400px;" [latitude]="map.lat" [longitude]="map.lng">
+              <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+            </agm-map>
+      
+            <br>
+            <!--Buttons-->
+            <div class="row text-center">
+              <div class="col-md-4">
+                <a mdbBtn floating="true" color="grey" class="accent-1 waves-light" mdbWavesEffect>
+                  <mdb-icon fas icon="map-marked"></mdb-icon>
+                </a>
+                <p>San Francisco, CA 94126</p>
+                <p>United States</p>
+              </div>
+      
+              <div class="col-md-4">
+                <a mdbBtn floating="true" color="grey" class="accent-1 waves-light" mdbWavesEffect>
+                  <mdb-icon fas icon="phone"></mdb-icon>
+                </a>
+                <p>+ 01 234 567 89</p>
+                <p>Mon - Fri, 8:00-22:00</p>
+              </div>
+      
+              <div class="col-md-4">
+                <a mdbBtn floating="true" color="grey" class="accent-1 waves-light" mdbWavesEffect>
+                  <mdb-icon fas icon="envelope"></mdb-icon>
+                </a>
+                <p>info@gmail.com</p>
+                <p>sale@gmail.com</p>
+              </div>
+            </div>
+      
+          </div>
+          <!--Grid column-->
+      
+        </div>
+      
+      </section>
+      <!--Section: Contact v.1-->
+</div>

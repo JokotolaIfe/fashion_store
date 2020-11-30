@@ -1,0 +1,135 @@
+<!doctype html>
+
+
+<head>
+  <meta charset="utf-8">
+
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/626775a3aa.js" crossorigin="anonymous"></script>
+      <!-- JQuery -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+      <!-- Animations init-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <script>
+     wow = new WOW({
+boxClass: 'wow', // default
+boxToggle: 'wow',
+animateClass: 'animated', // default
+offset: 0, // default
+mobile: true, // default
+live: true // default
+})
+wow.init();
+      </script>
+      <style>
+      .carousel-multi-item .controls-top .btn-floating {
+        background: none !important;
+      }
+      a.btn-floating {
+        background-color: transparent;
+      }
+      i.fas.fa-chevron-left{
+        color: rgb(24, 22, 22)
+      }
+      i.fas.fa-chevron-right{
+        color: rgb(24, 22, 22)
+      }
+
+      .white-skin .carousel-multi-item .controls-top > a, .white-skin .carousel-multi-item .carousel-indicators li, .white-skin .carousel-multi-item .carousel-indicators li.active {
+        background-color: white !important;
+      }
+
+      @media (min-width: 600px) {
+        .navbar.scrolling-navbar {
+          padding-bottom: 50px !important;
+          padding-top: 50px !important;
+      }
+
+      @media (min-width: 600px){
+        .navbar.scrolling-navbar.top-nav-collapse {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+         }
+      }
+
+      }
+    
+      </style>
+
+  <title>Fashion Store</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+
+  <base href="/">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable=no, user-scalable=no" />
+    <script>
+      $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+      </script>
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- <link rel="icon" type="image/x-icon" href="assets/fmslogo.png"> -->
+</head>
+
+<body class="white-skin">
+  <app-root></app-root>
+</body>
+
+</html>

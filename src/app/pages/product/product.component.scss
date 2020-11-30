@@ -1,0 +1,145 @@
+// .backgrnd{
+//     background-repeat: none;
+//     background-size: cover;
+//     background-position: center
+// }
+.container {
+    padding-top: unset !important;
+    margin-top: unset !important;
+}
+
+.row{
+    margin: unset !important;
+    padding-top: unset !important
+}
+
+.featured1 {
+    width: 100% !important;
+    height: 350px !important;
+    margin-bottom: 100px !important;
+    margin: auto !important;
+}
+
+.featured2 {
+    width: auto;
+    height: 450px !important;
+    margin: auto !important;
+    width: 100% !important
+}
+
+.ife {
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow: hidden;
+    text-align: center !important;
+}
+
+.my_text{
+    font-size: 12px;
+}
+
+.mybtn {
+    margin: 1%;
+}
+
+.active {
+    background-color: black;
+    color: white
+  }
+
+  .name {
+      font-size: 27px;
+      font-family: Calibri  ;
+      font-weight: bold;
+  }
+  .price {
+      font-size: 25px;
+  }
+  
+  .mine {
+    width: 100%;
+    height: auto;
+    line-height: 32px;
+    font-size: 18px;
+    padding: 10px;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    margin-top: 40px;
+    cursor: pointer;
+    text-align: center;
+}
+
+  .my_btn {
+      width: 100%;
+      height: auto;
+      line-height: 46px;
+      font-size: 24px;
+      padding: 10px;
+      border: solid 1px black;
+      color: black;
+      background-color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      text-align: center;
+  }
+
+  .my_btn:hover {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: auto;
+    line-height: 46px;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    border: solid 1px black;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s; 
+}
+
+
+.my_btn2 {
+    width: 320px;
+    margin: auto !important;
+    height: auto;
+    line-height: 56px;
+    font-size: 26px;
+    padding: 14px;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+mdb-card-img .img {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.my_btn2:hover {
+  margin: auto !important;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 320px;
+  height: auto;
+  line-height: 56px;
+  font-size: 26px;
+  padding: 14px;
+  text-align: center;
+  border: solid 1px black;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s; 
+}

@@ -1,0 +1,30 @@
+.carousel-item {
+    &.active, &.carousel-item-right, &.carousel-item-next {
+      display: flex !important;
+      flex-wrap: wrap
+    }
+  }
+
+  .carousel-multi-item .controls-top .btn-floating {
+    background-color: color !important;
+  }
+  a.btn-floating {
+    background-color: color !important;
+  }
+  i.fas.fa-chevron-left{
+    color: white !important;
+  }
+  i.fas.fa-chevron-right{
+    color: white !important;
+  }
+  .carousel-multi-item .controls-top .btn-floating {
+    background:none;
+}
+
+i.fas.fa-chevron-right {
+    color: black;
+}
+
+img {
+  height: 250px !important
+}

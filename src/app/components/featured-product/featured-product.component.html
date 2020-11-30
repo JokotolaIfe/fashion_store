@@ -1,0 +1,24 @@
+<div class="container text-center" style="margin-top: 5%; margin-bottom: 5%">
+        <h2 class="h1 font-weight-bold mb-5">Best Sellers</h2>
+        <p class="lead grey-text">Here are our best selling products</p>
+        
+        <mdb-carousel showControls showIndicators="false" nav-class="black" indicatorClass="black" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+        [animation]="'slide'">
+            <mdb-carousel-item *ngFor="let item of slides; let i = index">
+                <div class="col-md-4 pb-2" *ngFor="let card of item; let cardIndex = index">
+                    <mdb-card [routerLink]="['/product', card?.id]" class="collection-card" style="width: 20rem">
+                            <!--Card image-->
+                            <div class="view zoom">
+                                <img style="height: 370px !important; width: 100% !important; margin: auto !important" src="{{card?.featured_image1}}" alt="">
+                                <div class="stripe dark">
+                                <a>
+                                    <p>{{card?.product_name}} <mdb-icon fas icon="chevron-right"></mdb-icon></p>
+                                </a>
+                                </div>
+                            </div>
+                            <!--/.Card image-->
+                    </mdb-card>
+                </div>
+            </mdb-carousel-item>
+        </mdb-carousel>
+</div> 

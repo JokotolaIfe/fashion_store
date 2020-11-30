@@ -1,0 +1,121 @@
+.image {
+    height: 650px;
+    width: 80%;
+    // margin: 4%;
+}
+
+mdb-card {
+    margin-top: 5%;
+}
+
+.image2 {
+    height: 320px !important;
+    width: 100% !important;
+}
+
+.abc {
+  margin-bottom: 40px;
+  margin-top: 40px
+}
+
+.abc:hover .mydesign {
+    display: unset;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;  
+  }
+
+  .mydesign {
+    display: none;
+  }
+
+  .price {
+    font-size: 18px;
+    font-family: Seravek;
+  }
+
+
+// .mydesign {
+//     height: 70px !important;
+//     // position: absolute;
+//   transform-style: preserve-3d;
+//   transition: all 1s ease-in-out;
+//   width: 100%;
+// }
+//   .mydesign:hover {
+//     transform: rotateY(180deg);
+//   }
+//   .mydesign .side {
+//     backface-visibility: hidden;
+//     height: 100%;
+//     // position: absolute;
+//     width: 100%;
+//   }
+//   .mydesign .back {
+//     transform: rotateY(180deg);
+//   }
+  
+
+// row {
+//     justify-content: baseline;
+//     justify-self: 
+// }
+
+// .abc:hover{
+//     cursor: pointer;
+//     .size {
+//         animation: fadeIn ease .7s;
+//         -webkit-animation: fadeIn ease .7s;
+//         -moz-animation: fadeIn ease .7s;
+//         -o-animation: fadeIn ease .7s;
+//         -ms-animation: fadeIn ease .7s;  
+//     }
+
+//     .price {
+//         animation: fadeIn ease .5s;
+//         -webkit-animation: fadeIn ease .5s;
+//         -moz-animation: fadeIn ease .5s;
+//         -o-animation: fadeIn ease .5s;
+//         -ms-animation: fadeIn ease .5s;  
+//     }
+// }
+
+// .product:hover>.details {
+//     animation: fadeIn ease 1s;
+//     -webkit-animation: fadeIn ease 1s;
+//     -moz-animation: fadeIn ease 1s;
+//     -o-animation: fadeIn ease 1s;
+//     -ms-animation: fadeIn ease 1s;  
+    
+//     // display: block;
+//   }
+
+.mycat_card{
+  position: absolute !important; 
+  left: 0 !important; 
+  margin-top: 50px !important;
+  background-color: rgb(255, 255, 255, 0.9);
+  margin-left: 14% !important;
+}
+
+
+
+
+// [ngStyle]="i == 0 && {'margin-top': '95%'}" 
+
+@media (min-width: 600px){
+  .my_class {
+      margin-top: 170% !important
+   }
+   .image {
+     float: right !important
+   }
+}
+
+@media (max-width: 600px){
+  .image {
+    margin: auto !important;
+  }
+}

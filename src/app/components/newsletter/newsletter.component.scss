@@ -1,0 +1,36 @@
+.my_btn2 {
+    width: 320px;
+    margin: auto !important;
+    height: auto;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 14px;
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.my_btn2:hover {
+  margin: auto !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 320px;
+  height: auto;
+  line-height: 50px;
+  font-size: 20px;
+  padding: 14px;
+  text-align: center;
+  border: solid 1px black;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s; 
+}

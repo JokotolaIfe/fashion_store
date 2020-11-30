@@ -1,0 +1,52 @@
+<div class="container text-center">
+    <h3 class="h3 font-weight-bold mb-5"> All Products </h3>
+    <!-- <p class="px-5 mb-5 pb-1 lead grey-text" *ngIf="products?.length > 0">All Produ</p> -->
+  
+    <div class="row">
+        <div *ngFor="let product of products" class="col-lg-3 col-md-6 col-sm-12 col-xl-3">
+                <mdb-card [routerLink]="['/product', product?.id]" cascade="true" narrower="true" class="my_card card-ecommerce">
+                        <!--Card image-->
+                        <div class="view view-cascade overlay waves-light w-70" mdbWavesEffect>
+                          <img style="height: 200px !important; width: 100% !important" src="{{product?.featured_image1}}"
+                            alt="{{product?.description}}">
+                          <a>
+                            <div class="mask waves-effect waves-light"></div>
+                          </a>
+                        </div>
+                        <!--Card image-->
+                        <!--Card content-->
+                        <mdb-card-body cascade="true" class="text-center no-padding">
+                          <!--Category & Title-->
+                          <a href="" class="text-muted">
+                            <h5>{{product.sub_category_name}}</h5>
+                          </a>
+                          <mdb-card-title>
+                            <h6 class="card-title my-4">
+                              <strong>
+                                <a href="">{{product?.product_name}}</a>
+                              </strong>
+                            </h6>
+                          </mdb-card-title>
+                          <!--Description-->
+                          <!-- <mdb-card-text>
+                                {{product?.description.substring(0, 25)}}
+                          </mdb-card-text> -->
+                          <!--Card footer-->
+                          <mdb-card-footer>
+                          <span class="float-left" style="font-size: 18px; color: #46404084">₦{{product?.product_price | number}}</span>
+                            <span class="float-right">
+                              <a class="" [routerLink]="['/product', product?.id]" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                                <mdb-icon far icon="eye" class="ml-3"></mdb-icon>
+                              </a>
+                              <!-- <a class="" data-toggle="tooltip" data-placement="top" (click)="addToCart(product)" title="" mdbRadio=true   data-original-title="Add to Wishlist">
+                                <mdb-icon fas icon="cart-plus" class="ml-3"></mdb-icon>
+                              </a> -->
+                            </span>
+                          </mdb-card-footer>
+                        </mdb-card-body>
+                        <!--Card content-->
+                      </mdb-card>
+                
+        </div>
+    </div>
+</div>

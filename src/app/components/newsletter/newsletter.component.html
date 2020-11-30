@@ -1,0 +1,27 @@
+<!-- Section: Team v.2 -->
+<section style="height: auto; max-width: 600px; margin: auto !important; margin-top: 10%; margin-bottom: 10%" class="team-section text-center my-5">
+
+        <!-- Section heading -->
+        <h2 class="h1-responsive my-5">Join our newsletter</h2>
+        <!-- Section description -->
+        <p class="grey-text w-responsive mx-auto mb-5" *ngIf="thankYou === false">... and be the first to know about new collections, special offers, and much more..</p>
+                <div *ngIf="thankYou === false">
+                        <div class="md-form form-sm">
+                                <input mdbInput type="email" [(ngModel)]="email" name="emailk" id="form1" class="form-control form-control-sm">
+                                <label for="form1" class="">Email Address</label>
+                            </div>
+                            <div class="my_btn2" *ngIf="email" (click)="subscribe(email)">
+                                    SUBSCRIBE
+                                </div>  
+                                <div style="font-size: 12px; color: rgb(160, 152, 152)" class="text-center my-2">
+                                        By entering your email address, you give consent to Baum und Pferdgarten to collect and process your personal information. To find out more please read our Privacy Policy. You may opt out of receiving email updates at any time by unsubscribing.
+                                </div>
+
+                </div>
+                <div *ngIf="thankYou === true">
+                        <p class="grey-text w-responsive mx-auto mb-5">Success! Thank you for subscribing to our collections and special offers.</p>
+                </div>
+                   
+       
+      </section>
+      <!-- Section: Team v.2 -->

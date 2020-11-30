@@ -1,0 +1,41 @@
+// .aa {
+//     background-image: url('../../../assets/photo1.jpg');
+//     background-position: center;
+//     background-size: cover;
+// }
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .txt {
+        font-family: Calibri;
+        text-align: left;
+        text-transform: capitalize;
+        position: absolute;
+        font-size: 14px;
+        bottom: 0;
+    }
+    .my_col {
+        height: 500px; 
+        overflow: hidden; 
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .txt {
+        font-family: Calibri;
+        text-align: left;
+        text-transform: capitalize;
+        position: absolute;
+        font-size: 14px;
+        top: 0;
+    }
+    .my_col {
+        height: auto; 
+        padding: 20px;
+        overflow: hidden; 
+        position: relative;
+    }
+}

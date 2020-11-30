@@ -1,0 +1,340 @@
+<!--Navbar-->
+<mdb-navbar id="mycont0" SideClass="z-depth-0 scrolling-navbar text-center navbar navbar-expand-lg navbar-light white fixed-top" [containerInside]="false">
+
+<!-- Navbar brand -->
+<mdb-navbar-brand style="text-align: left">
+  <a id="mycont3" class="navbar-brand" style="font-family: Calibri; font-size: 35px; line-height: 40px; text-align: left; font-weight: bold; text-transform: uppercase" routerLink="/">NEW TASTE <BR>FASHION COUTRE</a>
+</mdb-navbar-brand>
+
+    <links>
+    <!-- Links -->
+        <ul id="mycont2" style="margin: auto !important;" class="navbar-nav text-justify mr-auto" >
+
+                <li id="mycont1" class="nav-item dropdown mega-dropdown" mdbDropdown>
+                        <a id="mycont1" mdbDropdownToggle style="height: 100% !important" class="nav-link dropdown-toggle z-depth-0">Collections</a>
+                        <div style="background-color: transparent !important" class="my_margin dropdown-menu mega-menu row z-depth-0 wow rollIn">
+                          <div class="my_space0">
+                            &nbsp;
+                          </div>
+                               <div class="container z-depth-0" style="height: 250px; padding: 50px; background-color: white !important">
+                                    <div *ngIf="collections" class="row mt-3 dark-grey-text">
+
+                                      
+                                        <!-- Grid column -->
+                                        <div class="col-sm-12 col-md-6 col-lg-1 col-xl-1 mx-auto mb-4">
+                                          
+                                        </div>
+                                        <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    
+                                              <!-- Links -->
+                                              <h6 class="text-uppercase font-weight-bold">{{collections[0]?.name}}</h6>
+                                              <hr class="white accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                                              <p *ngFor="let sub of collections[0]?.subcategories">
+                                                <a class="dark-text me" [routerLink]="['/category', sub?.id]">{{sub?.name}}</a>
+                                              </p>
+                                    
+                                            </div>
+                                            <!-- Grid column -->
+
+
+                                            <!-- Grid column -->
+                                            <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    
+                                              <!-- Links -->
+                                              <h6 class="text-uppercase font-weight-bold">{{collections[1]?.name}}</h6>
+                                              <hr class="white accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                                              <p *ngFor="let sub of collections[1]?.subcategories">
+                                                <a class="dark-text me" [routerLink]="['/category', sub?.id]">{{sub?.name}}</a>
+                                              </p>
+                                    
+                                            </div>
+                                            <!-- Grid column -->
+                                    
+                                            <!-- Grid column -->
+                                            <div  class="col-sm-12 col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    
+                                              <!-- Links -->
+                                              <h6 class="text-uppercase font-weight-bold">{{collections[2]?.name}}</h6>
+                                              <hr class="accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: transparent">
+                                              <p *ngFor="let sub of collections[2]?.subcategories">
+                                                <a class="dark-text me" [routerLink]="['/category', sub?.id]">{{sub?.name}}</a>
+                                              </p>
+                                    
+                                            </div>
+                                            <!-- Grid column -->
+                                    
+                                          
+                                            <!-- Grid column -->
+                                            <div class="col-sm-12 col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    
+                                              <!-- Links -->
+                                              <h6 class="text-uppercase font-weight-bold">{{collections[3]?.name}}</h6>
+                                              <hr class="accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: transparent">
+                                              <p *ngFor="let sub of collections[3]?.subcategories">
+                                                <a class="dark-text me" [routerLink]="['/category', sub?.id]">{{sub?.name}}</a>
+                                              </p>
+                                    
+                                            </div>
+                                            <!-- Grid column -->
+                                          
+                                                       <!-- Grid column -->
+                                              <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mx-auto mb-4">
+                                    
+                                                  <mdb-card cascade="true" narrower="true" class="card-ecommerce">
+                                                      <!--Card image-->
+                                                      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                                                        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(39).jpg"
+                                                          alt="sample photo"></mdb-card-img>
+                                                        <a>
+                                                          <div class="mask waves-effect waves-light"></div>
+                                                        </a>
+                                                      </div> <br>
+                                                      <div class="my_btn" style="margin-top: 20px" routerLink="/allproducts">
+                                                        ALL PRODUCTS
+                                                    </div>  
+                                                    </mdb-card>
+                                             
+                                                
+                                              </div>
+                                                        <!-- Grid column -->
+                                    </div>
+                               </div>
+                        </div>
+                </li>
+    
+    
+            <!-- Dropdown -->
+            <li class="nav-item dropdown mega-dropdown" mdbDropdown>
+            <a mdbDropdownToggle class="nav-link dropdown-toggle">Shops</a>
+            
+            <div class="dropdown-menu mega-menu row z-depth-0 my_margin2" style="background-color: transparent !important">
+              <div class="my_space">
+                &nbsp;
+              </div>
+              <div class="container z-depth-0 shops_container" style="background-color: white !important">
+                    <div class="row z-depth-0">
+                            <div *ngFor="let cat of my_categories" class="col-sm-12 col-lg-3 col-md-3 col-xl-3">
+                              <div class="cat_cont" [style.background-image]="'url(' + cat?.image + ')'">
+                                  <div class="category_card" [routerLink]="['/categoryproducts', cat?.id]">
+                                      <h2 class="font-weight-bold mb-2">{{cat?.name}}</h2>
+                                    </div>                            
+                                </div>
+                              </div>
+
+                        </div>
+              </div>
+            </div>
+            </li>
+          
+
+                    <li class="nav-item dropdown mega-dropdown">
+                        <a routerLink="/contact" class="nav-link">Contact</a>
+                    </li>
+        </ul>
+
+    
+    <!-- Links -->
+
+    <!-- Links -->
+    <ul style="height: auto !important; margin: auto !important; margin-right: 0px !important" class="text-right navbar-nav nav-flex-icons ml-auto">
+        <li class="nav-item">
+            <div class="dropdown" mdbDropdown>
+                <a mdbDropdownToggle mdbWavesEffect class="nav-link"><mdb-icon fas icon="user" aria-hidden="true"></mdb-icon></a>
+                <div class="dropdown-menu dropdown-dark">
+
+              <a 
+              class="dropdown-item" 
+              type="button"
+              data-toggle="modal"
+              data-target="#basicExample"
+              (click)="frame.show()" *ngIf="!user?.email">Login/Register</a>
+  
+              <!-- <a class="dropdown-item" *ngIf="user?.email">Profile</a> -->
+              <a class="dropdown-item" (click)="logout()" *ngIf="user?.email">Logout</a>
+              </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/cart">
+              <mdb-icon fas icon="shopping-cart" aria-hidden="true"></mdb-icon>
+              <mdb-badge *ngIf="carts?.length > 0" class="badge z-depth-0" color="red" pill="true" danger="true">{{carts?.length}}</mdb-badge>
+            </a>
+        </li>
+       
+    </ul>
+    <!-- Links -->
+    </links>
+<!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+
+          
+<div
+mdbModal
+#frame="mdbModal"
+class="modal fade top"
+id="frameModalTop"
+tabindex="-1"
+role="dialog"
+aria-labelledby="myModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog cascading-modal" role="document">
+  <!--Content-->
+  <div class="modal-content">
+    <!--Modal cascading tabs-->
+    <div class="modal-c-tabs">
+      <!-- Tab panels -->
+      <mdb-tabset
+        #staticTabs
+        [buttonClass]="'nav md-tabs tabs-2 grey darken-3'"
+        [contentClass]="''"
+        class="tab-content"
+      >
+        <!--Panel 7-->
+        <mdb-tab
+          class="tab-pane fade in show active"
+          id="panel7"
+          role="tabpanel"
+          heading="<i class='fas fa-user'></i> Login"
+        >
+          <!--Body-->
+          <div class="modal-body mb-1">
+            <form>
+              <div class="md-form form-sm">
+                <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+                <input
+                  mdbInput
+                  [(ngModel)]="email"
+                  name="email"
+                  type="text"
+                  id="form22"
+                  class="form-control"
+                />
+                <label for="form22">Your email</label>
+              </div>
+
+              <div class="md-form form-sm">
+                <mdb-icon fas icon="lock" class="prefix"></mdb-icon>
+                <input
+                  mdbInput
+                  [(ngModel)]="password"
+                  name="password"
+                  type="password"
+                  id="form23"
+                  class="form-control"
+                />
+                <label for="form23">Your password</label>
+              </div>
+            </form>
+            <div class="text-center mt-2">
+              <button mdbBtn color="dark" class="waves-light" (click)="login(email, password, carts)" mdbWavesEffect>
+                Log in
+                <mdb-icon fas icon="sign-in-alt" class="ml-1"></mdb-icon>
+              </button>
+            </div>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer display-footer">
+            <button
+              type="button"
+              mdbBtn
+              color="dark"
+              outline="true"
+              class="ml-auto"
+              data-dismiss="modal"
+              (click)="frame.hide()"
+              mdbWavesEffect
+            >
+              Close
+            </button>
+          </div>
+        </mdb-tab>
+        <!--/.Panel 7-->
+
+        <!--Panel 8-->
+        <mdb-tab
+          class="tab-pane fade"
+          id="panel8"
+          role="tabpanel"
+          heading="<i class='fas fa-user-plus'></i> Register"
+        >
+          <!--Body-->
+          <div class="modal-body">
+            <form>
+              <div class="md-form form-sm">
+                <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
+                <input
+                  mdbInput
+                  [(ngModel)]="email"
+                  name="email"
+                  type="text"
+                  id="form24"
+                  class="form-control"
+                />
+                <label for="form24">Your email</label>
+              </div>
+
+              <div class="md-form form-sm">
+                <mdb-icon fas icon="lock" class="prefix"></mdb-icon>
+                <input
+                  mdbInput
+                  [(ngModel)]="password"
+                  name="password"
+                  type="password"
+                  id="form25"
+                  class="form-control"
+                />
+                <label for="form25">Your password</label>
+              </div>
+
+              <div class="md-form form-sm">
+                <mdb-icon fas icon="lock" class="prefix"></mdb-icon>
+                <input
+                  mdbInput
+                  [(ngModel)]="cpassword"
+                  name="cpassword"
+                  type="password"
+                  id="form26"
+                  class="form-control"
+                />
+                <label for="form26">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button mdbBtn color="dark" class="waves-light" (click)="register(email, password, cpassword)" mdbWavesEffect>
+                  Sign up
+                  <mdb-icon fas icon="sign-in-alt" class="ml-1"></mdb-icon>
+                </button>
+              </div>
+            </form>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button
+              type="button"
+              mdbBtn
+              color="dark"
+              outline="true"
+              class="ml-auto"
+              data-dismiss="modal"
+              (click)="frame.hide()"
+              mdbWavesEffect
+            >
+              Close
+            </button>
+          </div>
+        </mdb-tab>
+        <!--/.Panel 8-->
+      </mdb-tabset>
+    </div>
+  </div>
+  <!--/.Content-->
+</div>
+</div>

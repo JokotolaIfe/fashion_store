@@ -1,0 +1,328 @@
+<div class="container">
+        <mdb-card>
+                <mdb-card-body>
+                  <!--Grid row-->
+                  <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-8 mb-4">
+                      <!-- Nav Tabs -->
+                      <mdb-tabset #staticTabs [buttonClass]="'md-pills pills-dark font-weight-bold'" [justified]="true" [disableWaves]="true">
+                        <!--Panel 1-->
+                        <mdb-tab heading="Billing">
+                          <div class="row">
+                            <div class="col-12">
+                              <!-- <form> -->
+                                <!--Grid row-->
+                                <div class="row">
+                                  <!--Grid column-->
+                                  <div class="col-md-6">
+                                    <!--firstName-->
+                                    <div class="md-form">
+                                      <label for="firstName" class="">First name</label>
+                                      <input mdbInput type="text" value="{{currentUser?.first_name}}"
+                                      [(ngModel)]="currentUser.first_name" name="{{currentUser?.first_name}}" id="firstName" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <!--Grid column-->
+              
+                                  <!--Grid column-->
+                                  <div class="col-md-6">
+                                    <!--lastName-->
+                                    <div class="md-form">
+                                      <label for="lastName" class="">Last name</label>
+                                      <input mdbInput  [(ngModel)]="currentUser.last_name" value="{{currentUser?.last_name}}"
+                                      name="{{currentUser?.last_name}}" type="text" id="lastName" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <!--Grid column-->
+                                </div>
+                                <!--Grid row-->
+              
+                                <!--Username-->
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                      <label for="email" class="">Email</label>
+                                      <input
+                                      [ngModelOptions]="{standalone: true}"
+                                        mdbInput
+                                        type="email"
+                                        id="email"
+                                        disabled
+                                        [(ngModel)]="user.email" name="{{user?.email}}"
+                                        class="form-control mb-4"
+                                        placeholder="youremail@example.com"
+                                      />
+                                    </div>
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="md-form">
+                                              <label for="phone" class="">Phone</label>
+                                              <input
+                                                mdbInput
+                                                [ngModelOptions]="{standalone: true}"
+                                                type="number"
+                                                id="phone"
+                                                class="form-control"
+                                                placeholder="090454989475"
+                                                [(ngModel)]="currentUser.phone" name="{{currentUser?.phone}}"
+                                              />
+                                            </div>
+                                      </div>
+                                </div>
+              
+                                <!--address-->
+                                <div class="md-form">
+                                  <label for="address" class="">Address</label>
+                                  <input
+                                    mdbInput
+                                    type="text"
+                                    id="address"
+                                    class="form-control mb-4"
+                                    placeholder="1234 Main St"
+                                    [(ngModel)]="currentUser.address" name="{{currentUser?.address}}"
+                                  />
+                                </div>
+              
+                                <!--address-2-->
+                                <div class="md-form">
+                                  <label for="address-2" class="">Shipping Address 2</label>
+                                  <input
+                                    mdbInput
+                                    type="text"
+                                    id="address2"
+                                    class="form-control mb-4"
+                                    placeholder="Shipping Address"
+                                    [(ngModel)]="currentUser.shipping_address" name="{{currentUser?.shipping_address}}"
+                                  />
+                                </div>
+
+                                <!--Grid row-->
+                                <div class="row">
+                                  <!--Grid column-->
+                                  <div class="col-lg-4 col-md-12">
+                                    <div class="md-form">
+                                      <mdb-select
+                                        [options]="optionsSelectCountry"
+                                        placeholder="Choose your option"
+                                        [(ngModel)]="currentUser.country" name="{{currentUser?.country}}"
+                                      ></mdb-select>
+                                      <label>Country</label>
+                                    </div>
+                                  </div>
+                                  <!--Grid column-->
+              
+                                  <!--Grid column-->
+                                  <div class="col-lg-4 col-md-6">
+                                    <div class="md-form">
+                                      <mdb-select
+                                        [options]="optionsSelectState"
+                                        placeholder="Choose your option"
+                                        [(ngModel)]="currentUser.state" name="{{currentUser?.state}}"
+                                      ></mdb-select>
+                                      <label>State</label>
+                                    </div>
+                                  </div>
+                                  <!--Grid column-->
+              
+                                  <!--Grid column-->
+                                  <div class="col-lg-4 col-md-6">
+                                    <div class="md-form">
+                                      <label for="zip">Zip</label>
+                                      <input
+                                        mdbInput
+                                        value="{{currentUser?.zip_code}}"
+                                        [ngModelOptions]="{standalone: true}"
+                                        type="text"
+                                        class="form-control"
+                                        id="zip"
+                                        placeholder=""
+                                        required
+                                        [(ngModel)]="currentUser.zip_code" name="{{currentUser?.zip_code}}"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--Grid column-->
+                                </div>
+                                <!--Grid row-->
+              
+                                <mdb-checkbox>I accept the terms and conditions</mdb-checkbox>
+                                <mdb-checkbox>Save this information for next time</mdb-checkbox>
+              
+                                <hr />
+              
+                                <!-- <label
+                                style="font-size: 12px; color: red"
+                                *ngIf="!currentUser.first_name || !currentUser?.last_name || !currentUser?.phone || !user?.email || !currentUser?.zip_code || !currentUser?.country || !currentUser?.state || !currentUser?.address || !carts"  
+                                >Please Fill all fields</label> -->
+                                <!-- [disabled]="!currentUser?.phone || !user?.email || !currentUser?.zip_code || !currentUser?.country || !currentUser?.state || !currentUser?.address || !carts" -->
+                                <button
+                                [disabled] ="!currentUser?.shipping_address || !currentUser?.phone || !currentUser?.email || !currentUser?.zip_code || !currentUser?.country || !currentUser?.state || !currentUser?.address || !carts"
+                                angular4-paystack
+                                [paystackOptions]="options"
+                                (paymentInit)="paymentCancel()"
+                                (close)="paymentCancel()"
+                                (callback)="paymentDone($event, currentUser?.first_name, currentUser?.last_name, currentUser?.phone, user?.email, currentUser?.zip_code, currentUser?.country, currentUser?.state, currentUser?.address, currentUser?.shipping_address, carts, reference, user?.uid, total, totalQuantity)"
+                                mdbBtn type="button" color="dark" block="true" mdbWavesEffect>
+                                  Pay ₦{{total | number}}
+                                </button>
+                              
+                              <!-- </form> -->
+                            </div>
+                          </div>
+                        </mdb-tab>
+
+                        <!-- <mdb-tab heading="2. Payment">
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="d-block my-3">
+                                <div class="mb-2">
+                                  <input
+                                    name="group2"
+                                    type="radio"
+                                    class="form-check-input with-gap"
+                                    id="radioWithGap4"
+                                    checked
+                                    required
+                                  />
+                                  <label class="form-check-label" for="radioWithGap4">Credit card</label>
+                                </div>
+                                <div class="mb-2">
+                                  <input
+                                    iname="group2"
+                                    type="radio"
+                                    class="form-check-input with-gap"
+                                    id="radioWithGap5"
+                                    required
+                                  />
+                                  <label class="form-check-label" for="radioWithGap5">Debit card</label>
+                                </div>
+                                <div class="mb-2">
+                                  <input
+                                    name="group2"
+                                    type="radio"
+                                    class="form-check-input with-gap"
+                                    id="radioWithGap6"
+                                    required
+                                  />
+                                  <label class="form-check-label" for="radioWithGap6">Paypal</label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                  <div class="md-form mb-0">
+                                    <label for="cc-name123">Name on card</label>
+                                    <input
+                                      mdbInput
+                                      type="text"
+                                      class="form-control"
+                                      id="cc-name123"
+                                      placeholder=""
+                                      required
+                                    />
+                                  </div>
+                                  <small class="text-muted">Full name as displayed on card</small>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                  <div class="md-form">
+                                    <label for="cc-number123">Credit card number</label>
+                                    <input
+                                      mdbInput
+                                      type="text"
+                                      class="form-control"
+                                      id="cc-number123"
+                                      placeholder=""
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-3 mb-3">
+                                  <div class="md-form">
+                                    <label for="cc-expiration123">Expiration</label>
+                                    <input
+                                      mdbInput
+                                      type="text"
+                                      class="form-control"
+                                      id="cc-expiration123"
+                                      placeholder=""
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <div class="md-form">
+                                    <label for="cc-cvv123">CVV</label>
+                                    <input
+                                      mdbInput 
+                                      type="text"
+                                      class="form-control" 
+                                      id="cc-cvv123"
+                                      placeholder=""
+                                      required
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <hr class="mb-4" />
+              
+                              <button mdbBtn type="button" color="dark" block="true" mdbWavesEffect>
+                                Place Order
+                              </button>
+                            </div>
+                          </div>
+                        </mdb-tab> -->
+                      </mdb-tabset>
+                    </div>
+                    <!--Grid column-->
+              
+                    <!--Grid column-->
+                    <div class="col-lg-4 mb-4">
+                      <!-- <button mdbBtn type="button" color="dark" block="true" mdbWavesEffect>
+                        Place Order
+                      </button> -->
+              
+                      <!--Card-->
+                      <mdb-card>
+                        <!--Card content-->
+                        <mdb-card-body>
+                          <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Summary</h4>
+              
+                          <hr />
+              
+                          <dl class="row" *ngFor="let cart of carts">
+                            <dd class="col-sm-8">
+                             {{cart?.product?.product_name}} ({{cart?.quantity | number}})
+                            </dd>
+                            <dd class="col-sm-4">
+                                ₦{{cart?.product?.product_price * cart?.quantity | number}}
+                            </dd>
+                            <hr />
+                          </dl>
+              
+                          
+                          <dl class="row">
+                              <dt class="col-sm-8">
+                                Total
+                              </dt>
+                              <dt class="col-sm-4">
+                                  ₦{{total | number}}
+                              </dt>
+                            </dl>
+                          <hr />
+                          
+
+                        </mdb-card-body>
+                      </mdb-card>
+                      <!--/.Card-->
+
+                      <!-- <div class="my_btn" (click)="checkOut(user.uid, total, selected_size, quantity)">
+                        BACK TO CART
+                      </div>   -->
+
+                    </div>
+                    <!--Grid column-->
+                  </div>
+                  <!--Grid row-->
+                </mdb-card-body>
+              </mdb-card>
+  </div>
